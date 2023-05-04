@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat Rooms2</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Chat Rooms</h4>
+            <form id="hostForm">
+              <input type="text" name="roomId" placeholder="Enter room ID" />
+              <button type="submit">Host room</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Join Room</h4>
+            <form id="joinForm">
+              <input type="text" name="roomId" placeholder="Room ID" />
+              <button href="/room" type="submit">Join Room</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <ul class="list-group" id="roomIdlist"></ul>
+        <div id="chatArea">
+          <h2 id="title"></h2>
+          <form id="chatForm" style="display: flex">
+            <input type="text" name="message" placeholder="Enter message" id="chatInput" />
+            <button type="submit" id="sendButton">Send</button>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="text-light p-1 align-items-center" style="background: #dc3545b5">
+      <span>Event:</span>
+      <span class="badge bg-light text-dark ms-2" style="font-size: 1.0rem"> Neosao Trial Event</span>
+    </div>
+    <div class="container-fluid" style="height: 100%">
+        <div class="row">
+            <div class="col mt-1">
+                <h5>
+                    <span
+                        class="text-muted "
+                        style="font-size: 0.90rem"
+                    >
+                    <i class="fa fa-flag-checkered fa-lg" aria-hidden="true"></i>
+                        Checkpoint Overview :
+                    </span>
+                    <span
+                        style="text-transform:capitalize"
+                        class="text-danger ms-2"
+                    >
+                    START
+                    </span>
+                </h5>
+            </div>
+            <div class="col mt-1">
+                <h5
+                    style="font-weight: 300"
+                    class="align-items-center"
+                >                    
+                    <span class="ms-2">
+                        <i class="fa fa-trophy fa-lg" aria-hidden="true"></i> &nbsp;  30/03/2023 13:00 - 01/04/2023 12:00
+                    </span>
+                </h5>
+            </div>
+    <!-- <input type="text" name="" placeholder="Enter room id" id="" /> <button>Join Room</button> -->
+    <div class="container-fluid my-5 p-3 bg-light" style="border-radius: 40px" id="title">     
+      <div class="table-responsive" style="border-radius: 10px">
+        <table class="table table-white table-hover" style="background-color: white">
+          <thead>
+            <tr style="background: #ece9f4; height: 50px; font-size: large; color: #6c6b70" class="align-items-center">
+              <th>Name</th>
+              <th>Race Name</th>
+              <th>Bib No</th>
+              <th>Age</th>
+              <th>City</th>
+              <th>Gender</th>
+              <th>Team</th>
+              <th style="width: 300px">Percent</th>
+            </tr>
+          </thead>
+          <tbody >
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
