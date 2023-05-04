@@ -20,7 +20,9 @@ app.use(cors());
 /**
  * Create HTTP server.
  */
-
+app.get("/",(req,res)=>{
+res.send("Server is running");
+})
 var server = http.createServer(app);
 
 /**
